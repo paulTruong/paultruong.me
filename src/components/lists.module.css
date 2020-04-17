@@ -1,0 +1,14 @@
+.list_minimal {
+  font-family: "Inter", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin: 0 0 1rem 0;
+  padding: 0;
+}
+
+.list__heading {
+  font-weight: 800;
+}
+
+.list__item_noBullet {
+  display: block;
+}
