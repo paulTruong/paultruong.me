@@ -13,6 +13,7 @@ import Header from "./Header/header"
 import Footer from "./Footer/footer"
 
 import "./layout.css"
+import LayoutStyles from "./layout.module.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -28,9 +29,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div>
-        <main>{children}</main>
-      </div>
+      <main className={LayoutStyles.content}>{children}</main>
       <Footer></Footer>
     </>
   )

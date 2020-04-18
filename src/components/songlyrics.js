@@ -6,7 +6,7 @@ const SongLyrics = () => (
     fontSize: `0.75rem`,
     margin: `2rem 0 0 0`,
     lineHeight: `1.2`,
-    maxWidth: `50%`,
+    maxWidth: `75%`,
   }}>
     <div style={{
       color: `#848484`,

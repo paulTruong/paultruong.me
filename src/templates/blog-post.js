@@ -2,14 +2,17 @@ import React from "react"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import typeStyles from "../components/typography.module.css"
+import SEO from "../components/seo"
+
 
 export default ({ data }) => {
   const post = data.markdownRemark
   return (
     <Layout>
+      <SEO title={post.frontmatter.title} />
       <header
         style={{
-          margin: `0 0 2rem 0`,
+          margin: `1.5rem 0`,
         }}
       >
         <h1

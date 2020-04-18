@@ -15,3 +15,19 @@
   color: #000;
   text-decoration: none;
 }
+
+.mainMenu__link:hover,
+.mainMenu__link[aria-current="page"] {
+  text-decoration: underline;
+}
+
+@media (min-width: 780px) and (min-height: 630px) {
+  .mainMenu__item {
+    display: block;
+    margin: 0 0 1rem 0;
+  }
+
+  .mainMenu {
+    margin: 2rem 0 0 0;
+  }
+}

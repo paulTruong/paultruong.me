@@ -1,0 +1,22 @@
+@media (min-width: 780px) and (min-height: 630px) {
+  .sidenav {
+    position: fixed;
+    max-width: 200px;
+  }
+
+  .sidenav__header {
+    top: 1.5rem;
+  }
+
+  .sidenav__footer {
+    top: 0;
+    margin: 16rem 0 0 0;
+  }
+
+  .content {
+    margin: 0 0 0 260px;
+    max-width: 600px;
+    min-height: 600px;
+    min-height: calc(80vh - 3rem);
+  }
+}
