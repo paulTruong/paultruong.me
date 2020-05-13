@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import MainMenuStyles from "./MainMenu.module.css"
+import MainMenuStyles from "./mainmenu.module.css"
 
 const MainMenu = () => (
   <nav>
