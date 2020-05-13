@@ -17,7 +17,7 @@ export default ({ data }) => {
       >
         <h1
           style={{
-            margin: `0 0 0.25rem 0`
+            margin: `0 0 0.5rem 0`
           }}
         >{post.frontmatter.title}</h1>
         <div className={typeStyles.date}>{post.frontmatter.date}</div>

@@ -12,7 +12,7 @@ const MainMenu = () => (
         <Link className={MainMenuStyles.mainMenu__link} to="/about">About</Link>
       </li>
       <li className={MainMenuStyles.mainMenu__item}>
-        <Link className={MainMenuStyles.mainMenu__link} to="/blog">Writing</Link>
+        <Link className={MainMenuStyles.mainMenu__link} to="/blog">Blog</Link>
       </li>
     </ul>
   </nav>

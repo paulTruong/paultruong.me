@@ -4,6 +4,8 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 const path = require(`path`)
+const _ = require("lodash")
+
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 //Gets the slug, adds it to Graphql query
@@ -20,11 +22,15 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 }
 
 //Create pages from slugs
-exports.createPages = async ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
+
+  const blogPostTemplate = path.resolve(`./src/templates/blog-post.js`)
+  const tagTemplate = path.resolve(`./src/templates/tags.js`)
+
   const result = await graphql(`
-    query {
-      allMarkdownRemark {
+    {
+      posts: allMarkdownRemark {
         edges {
           node {
             fields {
@@ -33,17 +39,44 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      tagsGroup: allMarkdownRemark(limit: 2000) {
+        group(field: frontmatter___tags) {
+          fieldValue
+        }
+      }
     }
   `)
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  // handle errors
+  if (result.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`)
+    return
+  }
+
+  const posts = result.data.posts.edges
+
+  posts.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
-      component: path.resolve(`./src/templates/blog-post.js`),
+      component: blogPostTemplate,
       context: {
         // Data passed to context is available
         // in page queries as GraphQL variables.
         slug: node.fields.slug,
+      },
+    })
+  })
+
+  const tags = result.data.tagsGroup.group
+
+  tags.forEach(tag => {
+    createPage({
+      path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
+      component: tagTemplate,
+      context: {
+        // Data passed to context is available
+        // in page queries as GraphQL variables.
+        tag: tag.fieldValue,
       },
     })
   })
