@@ -3,13 +3,10 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BlogList from "../components/bloglist"
 
-
 export default ({ data }) => {
-
   const blogTitle = `Recent posts`
   const blogDescription = `I write to teach, share, inspire and learn. Here you’ll find writing about web, design, learning and everything in between.`
   const blogPosts = data.allMarkdownRemark.edges
-
   return (
     <Layout>
       <SEO title="Home" />
