@@ -19,10 +19,10 @@ export default ({ data }) => {
         lineHeight: "1.2",
         color: "#c0c0c0",
       }}>
-        <span style={{ color: "#333" }}>Web developer,</span>
+        <span style={{ color: "#000" }}>Web developer,</span>
         <br></br>
         illustrator, designer, popper, locker, doodler, little brother, son, gamer, dreamer, friend,
-        <span style={{ color: "#333" }}> human</span>
+        <span style={{ color: "#000" }}> human</span>
       </div>
       <p>
         I'm Paul and I am a web developer with <i>far too many</i> interests.
