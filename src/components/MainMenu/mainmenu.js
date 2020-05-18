@@ -14,6 +14,9 @@ const MainMenu = () => (
       <li className={MainMenuStyles.mainMenu__item}>
         <Link className={MainMenuStyles.mainMenu__link} to="/blog">Blog</Link>
       </li>
+      <li className={MainMenuStyles.mainMenu__item}>
+        <Link className={MainMenuStyles.mainMenu__link} to="/now">Now</Link>
+      </li>
     </ul>
   </nav>
 )
