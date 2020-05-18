@@ -52,7 +52,7 @@ h1 {
 h2 {
   /* 22 */
   font-size: 1.375rem;
-  margin-bottom: 0.5rem;
+  margin: 1.5rem 0 0.5rem 0;
 }
 
 h3 {
@@ -73,6 +73,10 @@ h6 {
   font-size: 0.75rem;
 }
 
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
 p:first-of-type {
   margin-top: 0;
 }

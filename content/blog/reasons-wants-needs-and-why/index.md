@@ -21,11 +21,11 @@ For my new site, I came up with three main reasons that I wanted to meet:
 
 - Make the site more personal and less businessy
 - To work on a project to test my design skills.
-- I wanted a place to share and document my experiences, cools things I come across, my recommendations and what I've learnt.
+- I wanted a place to share and document my experiences, cool things I come across, my recommendations and what I've learnt.
 
 ## All business, no party
 
-My current site felt a little too business-y. I approached it as a tool to get clients and build my personal brand. I ended up burning out from trying to create the 'right' content for it and ended up posting nothing at all.
+My current site felt a little too businessy. I approached it as a tool to get clients and build my personal brand. I ended up burning out from trying to create the 'right' content for it and ended up posting nothing at all.
 
 This time I want the site to be more me. I want this site to be a place where I can I write and share without the pressure of making part of a perfect content marketing strategy. I want to write interesting content that others can learn from and connect with.
 
