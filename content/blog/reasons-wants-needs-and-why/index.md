@@ -2,7 +2,7 @@
 title: "Redesign: Reasons, wants, needs and why"
 date: "2020-05-12"
 description: "Knowing why you're doing something will help with decisions in the future."
-tags: ["Start here", "accessibility"]
+tags: ["redesign"]
 ---
 
 Before starting any project, it helps to know why you're doing it.
