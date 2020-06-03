@@ -1,3 +1,7 @@
+.content {
+  max-width: 700px;
+}
+
 @media (min-width: 780px) and (min-height: 630px) {
   .sidenav {
     position: fixed;
@@ -15,7 +19,6 @@
 
   .content {
     margin: 0 0 0 260px;
-    max-width: 600px;
     min-height: 600px;
     min-height: calc(80vh - 3rem);
   }
