@@ -56,7 +56,7 @@ module.exports = {
       games: [
         `Monster Hunter World: Icebourne (PC)`,
         `Overwatch (PC)`,
-        `DJMAX5: Respect (PC)`
+        `DJMAX5: Respect (PC)`,
         `Eagerly waiting for Cyberpunk 2077`,
       ],
       anime: [
