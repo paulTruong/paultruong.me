@@ -23,16 +23,8 @@ module.exports = {
     favourites: {
       listeningto: [
         {
-          title: `3.15.2020`,
-          artist: `Childish Gambino`
-        },
-        {
-          title: `YSIV`,
-          artist: `Logic`
-        },
-        {
-          title: `XX`,
-          artist: `Rage Against The Machine`
+          title: `ELE2`,
+          artist: `Busta Rhymes`
         }
       ],
       artists: [
@@ -62,8 +54,10 @@ module.exports = {
         },
       ],
       games: [
-        `MGS5: The Phantom Pain (PS4)`,
+        `Monster Hunter World: Icebourne (PC)`,
         `Overwatch (PC)`,
+        `DJMAX5: Respect (PC)`
+        `Eagerly waiting for Cyberpunk 2077`,
       ],
       anime: [
         `FLCL`,
