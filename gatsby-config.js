@@ -23,8 +23,8 @@ module.exports = {
     favourites: {
       listeningto: [
         {
-          title: `ELE2`,
-          artist: `Busta Rhymes`
+          title: `King's Disease`,
+          artist: `Nas`
         }
       ],
       artists: [
@@ -54,10 +54,10 @@ module.exports = {
         },
       ],
       games: [
-        `Monster Hunter World: Icebourne (PC)`,
+        `Chrono Trigger (DS Remake on 3DS)`,
         `Overwatch (PC)`,
-        `DJMAX5: Respect (PC)`,
-        `Eagerly waiting for Cyberpunk 2077`,
+        `Stardew Valley (PC)`,
+        `Eagerly waiting for Cyberpunk 2077 patches for PS4`,
       ],
       anime: [
         `FLCL`,
