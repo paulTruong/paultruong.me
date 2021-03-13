@@ -18,39 +18,39 @@ module.exports = {
         channel: `Instagram`,
         label: `@mrpaultruong`,
         link: `https://www.instagram.com/mrpaultruong/`,
-      }
+      },
     ],
     favourites: {
       listeningto: [
         {
           title: `King's Disease`,
-          artist: `Nas`
-        }
+          artist: `Nas`,
+        },
       ],
       artists: [
         {
           name: `Dave Rapoza`,
-          website: ``
+          website: ``,
         },
         {
           name: `Yuko Shimizu`,
-          website: ``
+          website: ``,
         },
         {
           name: `Katsuya Terada`,
-          website: ``
+          website: ``,
         },
         {
           name: `Marciej Kuciara`,
-          website: ``
+          website: ``,
         },
         {
           name: `Karla Ortiz`,
-          website: ``
+          website: ``,
         },
         {
           name: `Kim Jung Gi`,
-          website: ``
+          website: ``,
         },
       ],
       games: [
@@ -66,9 +66,15 @@ module.exports = {
         `Ghost in the Shell`,
         `Redline`,
       ],
-    }
+    },
   },
   plugins: [
+    {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        url: `https://shungokusatsu.paultruong.me/graphql`,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -86,20 +92,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 700,
-            }
-          },
-        ],
-      },
-    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

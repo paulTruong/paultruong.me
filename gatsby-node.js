@@ -6,78 +6,30 @@
 const path = require(`path`)
 const _ = require("lodash")
 
-const { createFilePath } = require(`gatsby-source-filesystem`)
-
-//Gets the slug, adds it to Graphql query
-exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions
-  if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `pages` })
-    createNodeField({
-      node,
-      name: `slug`,
-      value: slug
-    })
-  }
-}
-
 //Create pages from slugs
-exports.createPages = async ({ graphql, actions, reporter }) => {
+exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-
-  const blogPostTemplate = path.resolve(`./src/templates/blog-post.js`)
-  const tagTemplate = path.resolve(`./src/templates/tags.js`)
-
-  const result = await graphql(`
+  return graphql(`
     {
-      posts: allMarkdownRemark {
-        edges {
-          node {
-            fields {
-              slug
-            }
-          }
-        }
-      }
-      tagsGroup: allMarkdownRemark(limit: 2000) {
-        group(field: frontmatter___tags) {
-          fieldValue
+      allWpPost(sort: { fields: [date] }) {
+        nodes {
+          title
+          content
+          slug
+          date(formatString: "DD.MM.YYYY")
         }
       }
     }
-  `)
-
-  // handle errors
-  if (result.errors) {
-    reporter.panicOnBuild(`Error while running GraphQL query.`)
-    return
-  }
-
-  const posts = result.data.posts.edges
-
-  posts.forEach(({ node }) => {
-    createPage({
-      path: node.fields.slug,
-      component: blogPostTemplate,
-      context: {
-        // Data passed to context is available
-        // in page queries as GraphQL variables.
-        slug: node.fields.slug,
-      },
-    })
-  })
-
-  const tags = result.data.tagsGroup.group
-
-  tags.forEach(tag => {
-    createPage({
-      path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
-      component: tagTemplate,
-      context: {
-        // Data passed to context is available
-        // in page queries as GraphQL variables.
-        tag: tag.fieldValue,
-      },
+  `).then(result => {
+    result.data.allWpPost.nodes.forEach(node => {
+      createPage({
+        path: `blog/${node.slug}`,
+        component: path.resolve(`./src/templates/blog-post.js`),
+        context: {
+          //   This is passed as $slug to blog-post.js
+          slug: node.slug,
+        },
+      })
     })
   })
 }

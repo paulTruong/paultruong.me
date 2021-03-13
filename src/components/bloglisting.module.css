@@ -1,0 +1,19 @@
+.list {
+  font-family: var(--font-display);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.listItem {
+  margin-bottom: var(--spacing-standard-and-half);
+}
+
+.link {
+  font-weight: 400;
+}
+
+.date {
+  font-size: var(--font-size-xs);
+  display: block;
+}

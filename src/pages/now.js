@@ -12,24 +12,21 @@ const NowPage = () => (
     <div style={{ margin: `0 0 2rem 0` }}>
       <h2>Working for a not for profit</h2>
       <p>
-        I've been a web developer for Diabetes Australia for the past 2 years now. It's a great job, working with great people and I get a good sense of fulfillment from it.
+        I've been a web developer for Diabetes Australia since May 2018. It's a great job, working with great people and I get a good sense of fulfillment from it.
       </p>
-      <h2>Learning how to make paint environments</h2>
-      <p>I am going through Marciej Kuciara's <a href="https://www.learnsquared.com/courses/intro-env-paint#">Intro to Environment Painting</a> course.</p>
-      <p>Wait...</p>
-      <p>What does environment concept art have to do with web development and design...?</p>
-      <p>Absolutely nothing. And that's okay.</p>
-      <p>Prior to graduating year 12, I had dreams of becoming a concept artist but instead I spent a good chunk of my early twenties working a 'real' job. I don't want to be a concept artist anymore but I've always loved the art created for the entertainment industries. I also tend to have a compulsion to go deep and learn how to do the things that I love.</p>
-      <p>So this year I have committed to learning drawing, painting and illustration. Because I love it.</p>
-      <h2>Writing blog posts</h2>
-      <p>Some of you might have started reading my blog series on the process I took to redesign my website. I am continuing to write articles for that series.
-      </p>
+      <h2>Learning 3D Illustration</h2>
+      <p>I've started going through the <a href="https://polygonrunway.com/">Polygon Runway</a> 'Become a 3D illustrator' course. I've never tried 3D software before. It feels really fresh and interesting.</p>
+      <h2>Drawing Daily</h2>
+      <p>I've been building up a drawing habit because it's something I want to get good at. I might post my drawings here.</p>
       <h2>The other important things</h2>
       <p>
-        In between work, learning and writing. I am finding time to do the other things in life that are important to me.
+        In between work, learning and drawing. I am finding time to do the other things in life that are important to me.
       </p>
       <p>
-        That includes spending time with my girlfriend, checking in on my parents, brother and sister, talking trash with my mates and, of course, playing a few games of Overwatch every now and   again.
+        That includes spending time with my girlfriend, checking in on my parents, brother and sister, talking trash with my mates and, of course, playing a few games of Overwatch every now and again.
+      </p>
+      <p>
+        I also just got a Nintendo Switch. It's a mighty fine device.
       </p>
     </div>
   </Layout>

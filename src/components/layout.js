@@ -7,15 +7,14 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-
-import Header from "./Header/header"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import Footer from "./Footer/footer"
+import MainMenu from "./MainMenu/mainmenu"
 
-import "./layout.css"
+import "@wordpress/block-library/build-style/style.css"
 import LayoutStyles from "./layout.module.css"
 
-const Layout = ({ children }) => {
+export default function Layout({ children }) {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -25,11 +24,19 @@ const Layout = ({ children }) => {
       }
     }
   `)
-
+  const siteMeta = data.site.siteMetadata
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <main className={LayoutStyles.content}>{children}</main>
+      <header
+        className={LayoutStyles.header}
+        style={{ marginBottom: `var(--spacing-double)` }}
+      >
+        <Link className={LayoutStyles.siteTitle} to="/">
+          {siteMeta.title}
+        </Link>
+        <MainMenu></MainMenu>
+      </header>
+      <main className={LayoutStyles.main}>{children}</main>
       <Footer></Footer>
     </>
   )
@@ -38,5 +45,3 @@ const Layout = ({ children }) => {
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
-
-export default Layout

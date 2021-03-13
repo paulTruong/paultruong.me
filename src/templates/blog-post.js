@@ -1,41 +1,32 @@
 import React from "react"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
-import typeStyles from "../components/typography.module.css"
 import SEO from "../components/seo"
 
-
 export default ({ data }) => {
-  const post = data.markdownRemark
+  const post = data.allWpPost.nodes[0]
   return (
     <Layout>
-      <SEO title={post.frontmatter.title} />
-      <header
-        style={{
-          margin: `1.5rem 0`,
-        }}
-      >
-        <h1
-          style={{
-            margin: `0 0 0.5rem 0`
-          }}
-        >{post.frontmatter.title}</h1>
-        <div className={typeStyles.date}>{post.frontmatter.date}</div>
-      </header>
-      <main dangerouslySetInnerHTML={{ __html: post.html }} />
+      <SEO title={post.title} />
+      <article>
+        <header>
+          <time dateTime={post.date}>{post.date}</time>
+          <h1>{post.title}</h1>
+        </header>
+        <div dangerouslySetInnerHTML={{ __html: post.content }} />
+      </article>
     </Layout>
   )
 }
 
 export const query = graphql`
   query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      frontmatter {
+    allWpPost(filter: { slug: { eq: $slug } }) {
+      nodes {
         title
+        content
         date(formatString: "DD.MM.YYYY")
       }
     }
   }
-
 `
