@@ -1,10 +1,13 @@
 .social {
-  margin: 0 0 0.5rem 0;
-}
-.social__channel {
-  color: #4d4d4d;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Inter", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 0.75rem;
+  margin: 3rem 0 0 0;
 }
 
-.social__link {
-  color: #333;
+.social-item {
+  margin-bottom: var(--spacing-standard);
 }

@@ -1,9 +1,13 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
+import Prism from "prismjs"
 
 export default ({ data }) => {
+    useEffect(()=> {
+        Prism.highlightAll()
+    })
   const post = data.allWpPost.nodes[0]
   return (
     <Layout>

@@ -95,12 +95,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Paul Truong dot me`,
+        short_name: `Paul Truong`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
+        icon: `icon.png`,
+        background_color: `#fff`,
+        theme_color: `#fff`,
+        display: `standalone`,
         include_favicon: false,
         legacy: false,
       },

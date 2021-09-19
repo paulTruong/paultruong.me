@@ -5,14 +5,23 @@
   margin: 3rem 0 0 0;
 }
 
-.footer__backtotop {
+.backtotop {
   display: block;
   color: #333;
 }
 
-@media (min-width: 780px) {
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5rem 0 0 0;
+}
+
+.social {
+  display: block;
+}
+
+@media screen and (min-width: 48.75rem) and (min-height: 39rem) {
   .social {
-    position: fixed;
-    top: 400px;
+    display: none;
   }
 }
